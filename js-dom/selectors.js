@@ -75,6 +75,13 @@ sections[1].style.color = "blue"
 //*          GETELEMENTSBYCLASSNAME()
 //*===========================================
 
+const myLists = document.getElementsByClassName("list")
+console.log(myLists) //? HTMLCollection(5) [li.list, li.list, li.list, li.list, li.list]
+console.log(myLists[0].innerText)
+
+const section = document.getElementsByClassName("item-list") //? one element array
+console.log(section[0])
+
 //* ========================================
 //*              QUERYSELECTOR()
 //* ========================================

@@ -88,13 +88,13 @@ console.log(section[0])
 //! id, tag, class can be selected with Query Selector
 //! it selects the first element it reads in the flow
 
-//? id almak için (#)
+//? to select an id (#)
 console.log(document.querySelector("#header"))
 
-//? class almak için (.)
+//? to select a class (.)
 console.log(document.querySelector(".item-list"))
 
-//? tag almak için ()
+//? to select a tag ()
 console.log(document.querySelector("h3"))
 
 //? CSS selector

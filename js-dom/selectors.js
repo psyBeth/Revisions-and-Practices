@@ -85,6 +85,22 @@ console.log(section[0])
 //* ========================================
 //*              QUERYSELECTOR()
 //* ========================================
+//! id, tag, class can be selected with Query Selector
+//! it selects the first element it reads in the flow
+
+//? id almak için (#)
+console.log(document.querySelector("#header"))
+
+//? class almak için (.)
+console.log(document.querySelector(".item-list"))
+
+//? tag almak için ()
+console.log(document.querySelector("h3"))
+
+//? CSS selector
+console.log(document.querySelector("section.add-item #btn"))
+
+console.log(document.querySelector("ul li:nth-child(4)").innerText)
 
 //* ========================================
 //*              QUERYSELECTORALL()

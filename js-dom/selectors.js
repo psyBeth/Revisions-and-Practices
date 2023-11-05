@@ -105,3 +105,15 @@ console.log(document.querySelector("ul li:nth-child(4)").innerText)
 //* ========================================
 //*              QUERYSELECTORALL()
 //* ========================================
+
+const itemLists = document.querySelectorAll("section.item-list li")
+console.log(itemLists) //? NodeList(5) [li.list, li.list, li.list, li.list, li.list]
+
+//! querySelectorAll makes a nodelist which includes forEach method, to convert to array Array.from() can be used if wanted
+
+itemLists.forEach((li) => console.log(li))
+
+//? alternative iteration
+for(let li of itemLists) {
+    console.log(li)
+}

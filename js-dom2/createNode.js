@@ -47,3 +47,25 @@ if (myPar.classList.contains("border-danger")) {
 //? toggle method removes the class if that specific class has been added before
 myPar.classList.toggle("text-danger")
 
+//* ------- CREATING A NEW ELEMENT W (InnerHTML)------
+
+const ul = document.querySelector("ul")
+
+ul.innerHTML += `<li id='deneme'>C++</li>
+<li class="fw-bold">Java</li>
+<li>Ruby</li> 
+<li>Asembly</li>`
+ //! this method is not very secure
+
+const section3 = document.createElement("section")
+document.querySelector("main").appendChild(section3)
+
+section3.innerHTML = `
+    <div class="card" style="width: 14rem;">
+        <img src="https://cdn.pixabay.com/photo/2023/10/27/12/13/vineyard-8345243_1280.jpg" class="card-img-top" alt="img">
+        <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>`

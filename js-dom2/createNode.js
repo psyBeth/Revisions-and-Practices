@@ -49,13 +49,13 @@ myPar.classList.toggle("text-danger")
 
 //* ------- CREATING A NEW ELEMENT W (InnerHTML)------
 
-const ul = document.querySelector("ul")
+const ul = document.querySelector("ul") 
 
 ul.innerHTML += `<li id='deneme'>C++</li>
 <li class="fw-bold">Java</li>
 <li>Ruby</li> 
 <li>Asembly</li>`
- //! this method is not very secure
+ //! this method doesn't have high security
 
 const section3 = document.createElement("section")
 document.querySelector("main").appendChild(section3)

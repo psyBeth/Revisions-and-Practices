@@ -122,7 +122,7 @@ footer {
     .social-icons {
       display: flex;
   
-      //? Dizi
+      //? array?
       $textColors: black, red, green, blue, orange;
   
       @for $i from 1 through length($textColors) {

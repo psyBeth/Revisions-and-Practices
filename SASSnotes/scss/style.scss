@@ -77,7 +77,7 @@ header{
     display: flex;
     gap: 0.4rem;
     margin-top: 1rem;
-    
+
 .card1{
     @include card(yellow, black)
 }
@@ -92,3 +92,55 @@ header{
 }
 
 }
+
+//? -----ARTICLES-----
+.articles{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    .article1{
+        background-color: gray;
+        flex: 1;
+        height: 10rem;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    .article2{
+        @extend .article1;
+        background-color: green;
+    }
+}
+
+//*************************
+//! FOR LOOP
+//*************************
+footer {
+    p {
+      background-color: $bannerBgColor;
+    }
+  
+    .social-icons {
+      display: flex;
+  
+      //? Dizi
+      $textColors: black, red, green, blue, orange;
+  
+      @for $i from 1 through length($textColors) {
+        .social#{$i} {
+          flex: 1;
+          font-size: $i * 1rem;
+          @if $i%2 == 0 {
+            background-color: darken(yellow, $i * 3);
+          } @else {
+            background-color: darken(red, $i * 3);
+          }
+          color: nth($textColors, $i);
+        }
+      }
+    }
+  }
+  
+  //***********************************************
+  //! IF-ELSE
+  //************************************************
+  

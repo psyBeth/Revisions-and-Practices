@@ -112,4 +112,57 @@ header ul li a:hover {
   height: 10rem;
 }
 
+.articles {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.articles .article1, .articles .article2 {
+  background-color: gray;
+  flex: 1;
+  height: 10rem;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.articles .article2 {
+  background-color: green;
+}
+
+footer p {
+  background-color: hotpink;
+}
+footer .social-icons {
+  display: flex;
+}
+footer .social-icons .social1 {
+  flex: 1;
+  font-size: 1rem;
+  background-color: #f00000;
+  color: black;
+}
+footer .social-icons .social2 {
+  flex: 1;
+  font-size: 2rem;
+  background-color: #e0e000;
+  color: red;
+}
+footer .social-icons .social3 {
+  flex: 1;
+  font-size: 3rem;
+  background-color: #d10000;
+  color: green;
+}
+footer .social-icons .social4 {
+  flex: 1;
+  font-size: 4rem;
+  background-color: #c2c200;
+  color: blue;
+}
+footer .social-icons .social5 {
+  flex: 1;
+  font-size: 5rem;
+  background-color: #b30000;
+  color: orange;
+}
+
 /*# sourceMappingURL=style.css.map */

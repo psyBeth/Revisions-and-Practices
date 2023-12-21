@@ -110,10 +110,6 @@ header{
         background-color: green;
     }
 }
-
-//*************************
-//! FOR LOOP
-//*************************
 footer {
     p {
       background-color: $bannerBgColor;
@@ -122,9 +118,9 @@ footer {
     .social-icons {
       display: flex;
   
-      //? array?
+      //? array
       $textColors: black, red, green, blue, orange;
-  
+      //! for loop
       @for $i from 1 through length($textColors) {
         .social#{$i} {
           flex: 1;

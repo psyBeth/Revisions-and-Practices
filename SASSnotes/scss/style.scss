@@ -1,6 +1,7 @@
 // $bgColor: #444;
 @import "variables"; 
 @import "reset";
+@import "mixins";
 
 body{
     font-family: $fontFamily;
@@ -70,4 +71,21 @@ header{
         max-width: 600px;
         min-width: 300px;
     }
+}
+//? -------CARDS-------
+.cards{
+
+.card1{
+    @include card(yellow, black)
+}
+.card2{
+    @include card(red, yellow)
+}
+.card3{
+    @include card(black, white)
+}
+.card4{
+    @include card(blue, yellow)
+}
+
 }

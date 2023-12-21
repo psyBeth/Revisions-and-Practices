@@ -65,4 +65,21 @@ header ul li a:hover {
   min-width: 300px;
 }
 
+.cards .card1 {
+  border-radius: 10px;
+  border: 2px solid brown;
+}
+.cards .card2 {
+  border-radius: 10px;
+  border: 2px solid brown;
+}
+.cards .card3 {
+  border-radius: 10px;
+  border: 2px solid brown;
+}
+.cards .card4 {
+  border-radius: 10px;
+  border: 2px solid brown;
+}
+
 /*# sourceMappingURL=style.css.map */

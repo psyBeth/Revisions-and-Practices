@@ -1,0 +1,6 @@
+//@import "variables" (if not found)
+
+@mixin card($bg, $color){
+    border-radius: 10px;
+    border: $myBorder;
+}

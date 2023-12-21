@@ -74,7 +74,10 @@ header{
 }
 //? -------CARDS-------
 .cards{
-
+    display: flex;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    
 .card1{
     @include card(yellow, black)
 }

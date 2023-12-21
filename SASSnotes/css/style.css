@@ -1,9 +1,28 @@
+body {
+  font-family: "Tahoma";
+  font-size: 20px;
+  color: #333;
+}
+
 header {
-  background-color: aqua;
+  background-color: #30a7c3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 header img {
   width: 80px;
   border-radius: 10px;
+}
+header ul {
+  list-style-type: none;
+}
+header ul li {
+  display: inline-block;
+}
+header ul li a {
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

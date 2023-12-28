@@ -20,15 +20,25 @@
 // console.timeEnd("begin") //? end the timer and show the time period
 
 //*ASYNC --- setTimeout()
-const timeoutId = setTimeout(() => {
-    console.log("Time's up");
-} , 1000) //? triggers after 1000 ms
+// const timeoutId = setTimeout(() => {
+//     console.log("Time's up");
+// } , 1000) //? triggers after 1000 ms
 
-setTimeout(() => {
-    console.log("timeout2 is up");
-} , 500)
+// setTimeout(() => {
+//     console.log("timeout2 is up");
+// } , 500)
 
-console.log("timeout is set"); //?sync
-console.log("timeout is up");  //?sync
+// console.log("timeout is set"); //?sync
+// console.log("timeout is up");  //?sync
 
-clearTimeout(timeoutId) //? cancels timeout
+// clearTimeout(timeoutId) //? cancels timeout
+
+//* ASYNC --- setInterval() - clearInterval()
+
+let i = 0 
+const time = setInterval(() => {
+    console.log(++i);
+    if (i>=5){
+        clearInterval(time)
+    }
+} , 1000)

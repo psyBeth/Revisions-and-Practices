@@ -35,10 +35,33 @@
 
 //* ASYNC --- setInterval() - clearInterval()
 
-let i = 0 
-const time = setInterval(() => {
-    console.log(++i);
-    if (i>=5){
-        clearInterval(time)
-    }
-} , 1000)
+// let i = 0 
+// const time = setInterval(() => {
+//     console.log(++i);
+//     if (i>=5){
+//         clearInterval(time)
+//     }
+// } , 1000)
+
+//! Callback Hell (nested and independant callbacks)
+/* hard to understand and not a very good programming approach */
+
+setTimeout(() => {
+  console.log("john:Hi") //? request
+  setTimeout(() => {
+    console.log("Sarah: Hello") //? respond
+    setTimeout(() => {
+      console.log("John: How Are you?") //? send data
+      setTimeout(() => {
+        console.log("Sarah:Fine and you?") //? starting to send
+      }, 1000)
+    }, 1000)
+  }, 1000)
+}, 1000)
+
+//? SOLUTIONS
+//* 1- XMLHttpRequest (old method, example: AJAX)
+//? https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+//* 2- Promise (suitable for custom async code- Advance)
+//! 3- Fetch API (easy version of Promise),
+//! 4- ASYNC-AWAIT (tiny adds to Fetch API)

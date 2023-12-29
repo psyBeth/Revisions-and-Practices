@@ -24,3 +24,12 @@ fetch("https://api.github.com/user")
     })
     .catch((err) => showError(err))
 
+const show = (users) => {
+    console.log(users)
+    const userSection = document.getElementById("users")
+
+    users.forEach((user) => {
+        console.log(users)
+        const userSection = document.getElementById("users")
+    })
+}

@@ -27,8 +27,11 @@ const getNews = async () => {
         if(!res.ok) {
             throw new Error (`Something went wrong:${res.status}`)
         }
+
         const data = await res.json()
+
         renderNews(data.articles)
+        
     } catch (error) {
         const newsDiv = document.getElementById("news-div")
         newsDiv.innerHTML = `

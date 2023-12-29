@@ -11,7 +11,13 @@
 
 console.log("FETCH");
 let veri = "helloworld"
-fetch("https://api.github.com/user")
+const accessToken = "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";
+
+fetch("https://api.github.com/user", {
+    headers: {
+        Authorization: `Bearer ${accessToken}`,
+    },
+})
     .then((res) => {
         if (!res.ok) {
             //? WE need to catch the error in fetch API

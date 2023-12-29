@@ -15,7 +15,7 @@ fetch("https://api.github.com/user")
     .then((res) => {
         if (!res.ok) {
             //? WE need to catch the error in fetch API
-            throw new Error(`Error: ${res.status}`) //? throwing an error in
+            throw new Error(`Error: ${res.status}`); //? throwing an error in
         }
         return res.json()
     })
@@ -29,7 +29,17 @@ const show = (users) => {
     const userSection = document.getElementById("users")
 
     users.forEach((user) => {
-        console.log(users)
-        const userSection = document.getElementById("users")
+        userSection.innerHTML += `
+        <h1>${user.login}</h1>
+        <img src="${user.avatar_url}" width="200px" alt="" />
+        <p><a href="${user.html_url}" target="_blank">URL</a></p> 
+    `
     })
 }
+
+const showError = (err) => {
+    const userSection = document.getElementById("users")
+    userSection.innerHTML = `<h1>${err}</h1>
+    <img src="./img/404.png" alt="" />
+    `
+  }

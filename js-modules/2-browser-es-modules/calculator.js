@@ -15,3 +15,5 @@ export {addit, subtrac, multip, divis}
 const message = () => {
     console.log("Module finished");
 }
+export default message //? default export method
+//? only one export default can be used in one module

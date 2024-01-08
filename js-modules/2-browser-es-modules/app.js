@@ -13,9 +13,12 @@ console.log(pi * 10 * 10);
 import { addit, subtrac, multip, divis } from "./calculator.js";
 // imports are hoisted
 
-
-
 console.log("TOTAL:", addit(3, 4) );
+
+//? use regular paranthesis when using variable with export default (importing)
+//? any name can be called without using "as" in export default
+import message from "./calculator.js";
+message()
 
 //! 1- Imports are hoisted so they can be added anywhere, but best practice is to add them at the top.
 

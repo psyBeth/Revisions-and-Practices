@@ -16,10 +16,17 @@ import { addit, subtrac, multip, divis } from "./calculator.js";
 console.log("TOTAL:", addit(3, 4) );
 
 //? use regular paranthesis when using variable with export default (importing)
-//? any name can be called without using "as" in export default
 import message from "./calculator.js";
 message()
+//? any name can be called without using "as" in export default
+// import expression from "./hesapMakinasi.js"
+// expression()
 
 //! 1- Imports are hoisted so they can be added anywhere, but best practice is to add them at the top.
 
 //! 2- Using top-level this does not show the window object.
+console.log(this);   //? undefined
+
+//! 3- By default 'use strict' is on. So compilation is made more strictly.
+variable = 2
+console.log(variable)  //? not defined error without a keyword

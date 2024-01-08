@@ -6,9 +6,17 @@
 //? The available ones can be added to the desired file with the "import" statement
 //* this is out main file
 
-import { addit } from "./calculator";
+import { name, PI as pi } from "./calculator.js";
+console.log(name);
+console.log(pi * 10 * 10);
+
+import { addit, subtrac, multip, divis } from "./calculator.js";
 // imports are hoisted
 
-console.log(" ***ES-Modules*** ");
+
 
 console.log("TOTAL:", addit(3, 4) );
+
+//! 1- Imports are hoisted so they can be added anywhere, but best practice is to add them at the top.
+
+//! 2- Using top-level this does not show the window object.

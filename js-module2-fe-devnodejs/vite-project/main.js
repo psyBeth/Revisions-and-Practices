@@ -4,16 +4,8 @@ const app = document.querySelector('#app')
 
 app.innerHTML = `<section id="users"></section>`
 
-const getUser = () => {
-  console.log("FETCH");
-let veri = "helloworld"
-const accessToken = "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";
-
-fetch("https://api.github.com/user", {
-    headers: {
-        Authorization: `Bearer ${accessToken}`,
-    },
-})
+const getUsers = () => {
+fetch("https://api.github.com/users")
     .then((res) => {
         if (!res.ok) {           
             throw new Error(`Error: ${res.status}`);
@@ -48,4 +40,6 @@ const showError = (err) => {
     `
   }
 
-
+window.addEventListener("load", ()=> {
+  getUsers()
+})

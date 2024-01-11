@@ -2,7 +2,7 @@
   "name": "4-nodejs-es-modules",
   "version": "1.0.0",
   "description": "",
-  "type":"module",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node index",
@@ -10,5 +10,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "node-emoji": "^2.1.3"
+  }
 }

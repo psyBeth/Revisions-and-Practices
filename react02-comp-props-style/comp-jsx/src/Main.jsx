@@ -1,3 +1,4 @@
+//* named export 
 import bird from "./img/bird.jpg"
 
 export const Main = () => {

@@ -1,12 +1,12 @@
 function Header() {
    //*   JS alani
-   const mesaj = "hello"
-   console.log(mesaj)
+   const message = "hello"
+   console.log(message)
  
    return (
      <header className="header-main">
        {/* JSX */}
-       <h1 style={{ color: "violet" }}>Header {mesaj}</h1>
+       <h1 style={{ color: "violet" }}>Header {message}</h1>
      </header>
    )
 }

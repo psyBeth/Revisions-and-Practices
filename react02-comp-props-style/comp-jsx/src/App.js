@@ -1,8 +1,11 @@
+import Header from "./Header"
+
 function App() {
   return (
-    <div>
+    <>
       <h1>React App</h1>
-    </div>
+      <Header />
+    </>
   )
 }
 

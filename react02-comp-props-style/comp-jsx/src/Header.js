@@ -1,3 +1,5 @@
+import "./Header.css"
+
 function Header() {
    //*   JS alani
    const message = "hello"

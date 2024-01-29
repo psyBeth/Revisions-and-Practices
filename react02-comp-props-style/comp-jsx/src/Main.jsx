@@ -44,7 +44,7 @@ export const Main = () => {
 
         <img src={bird} alt="humming" style={imgStyle} />
 
-        {/* images in public folder can be reached directly, showed a path to recah it */}
+        {/* images in public folder can be reached directly ("import" is needed for the pics that are not from public), showed a path to reach it */}
         <img src="./images/bird2.jpg" alt="bird2" style={imgStyle} />
 
     </main>

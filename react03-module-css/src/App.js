@@ -1,7 +1,10 @@
+import Card from "./components/card/Card";
+
+
 function App() {
   return (
     <div>
-      <h1>bebebebebe</h1>
+      <Card />
     </div>
   );
 }

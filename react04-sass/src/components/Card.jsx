@@ -1,7 +1,8 @@
 import "../scss/card.scss"
 
 const Card = ({ veri }) => {
-  const {id, name, job, comment, img} = veri
+  const {id, name, job, comment, img} = veri [0]
+  //! ITERATION NEEDED
   return (
     <div>
       <h2>{name}</h2>

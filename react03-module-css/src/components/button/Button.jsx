@@ -2,8 +2,8 @@ import "./Button.css"
 
 const Button = ({ name }) => {
   return (
-    <div>
-      <button>Info</button>
+    <div className="title">
+      <button className="btn-blue">{name}</button>
     </div>
   )
 }

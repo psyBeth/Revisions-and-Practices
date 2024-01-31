@@ -2,13 +2,13 @@ import Header from "./components/Header"
 import Card from "./components/Card"
 import Footer from "./components/Footer"
 
-import data from "./data";
+
 
 function App() {
   return (
     <>
       <Header />
-      <Card veri={data}/>
+      <Card />
       <Footer />
     </>
   );

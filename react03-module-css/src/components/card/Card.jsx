@@ -6,11 +6,11 @@ const Card = () => {
     console.log(data);
   return (
     <div>
-      {data.map( (item) => (
+      {data.map( ({ language, img, btnName}) => (
         <>
-          <h1>{item.language}</h1>
-          <img src={item.img} alt="" />
-          <Button name={item.btnName} />
+          <h1>{language}</h1>
+          <img src={img} alt="img" />
+          <Button name={btnName} />
         </>
       ) )}
 

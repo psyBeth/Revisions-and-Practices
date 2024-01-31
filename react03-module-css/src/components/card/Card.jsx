@@ -8,7 +8,7 @@ const Card = () => {
     <div>
       {data.map( ({ id, language, img, btnName}) => (
         <div key={id}>
-          <h1>{language}</h1>
+          <h1 className="title">{language}</h1>
           <img src={img} alt="img" />
           <Button name={btnName} />
         </div>

@@ -6,12 +6,12 @@ const Card = () => {
     console.log(data);
   return (
     <div>
-      {data.map( ({ language, img, btnName}) => (
-        <>
+      {data.map( ({ id, language, img, btnName}) => (
+        <div key={id}>
           <h1>{language}</h1>
           <img src={img} alt="img" />
           <Button name={btnName} />
-        </>
+        </div>
       ) )}
 
         {/* //? will be iterating now 

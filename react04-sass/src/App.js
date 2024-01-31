@@ -2,13 +2,14 @@ import Header from "./components/Header"
 import Card from "./components/Card"
 import Footer from "./components/Footer"
 import "./scss/app.scss"
+import data from "./data"
 
 
 function App() {
   return (
     <>
       <Header />
-      <Card />
+      <Card veri={data}/>
       <Footer />
     </>
   );

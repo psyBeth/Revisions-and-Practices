@@ -1,8 +1,8 @@
-
+import "../scss/card.scss"
 
 const Card = () => {
   return (
-    <div>Card</div>
+    <div className="title">Card</div>
   )
 }
 

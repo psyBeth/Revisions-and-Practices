@@ -7,11 +7,17 @@ const Events = () => {
         console.log("Name:", e.target.name);
         console.log("ID:", e.target.id);
     }
+    const handleDelete = function (){
+        console.log("deleted.");
+    }
   return (
     <div>
         <h1>Events</h1>
         <button onClick={handleClick} id="btn" name="my-button">
             Click
+        </button>
+        <button onClick={handleDelete()}>
+            Delete
         </button>
     </div>
   )

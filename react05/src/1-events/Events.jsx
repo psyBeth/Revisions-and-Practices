@@ -20,7 +20,11 @@ const Events = () => {
         console.log(message);
     }
 
-    
+    //* there're 3 different methods of re-rendering the return part of the component
+    //* 1- any state being changed
+    //* 2- props being changed
+    //* 3- forced refresh (not prefered)
+
   return (
     <div>
         <h1>Events</h1>
@@ -39,3 +43,7 @@ const Events = () => {
 }
 
 export default Events
+
+//* there are 2 different component structure in ReactJS to use state
+//* 1. Hooks (functional components)
+//* 2. Statefull Classes (class components)

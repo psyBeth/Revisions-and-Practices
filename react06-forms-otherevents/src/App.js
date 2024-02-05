@@ -1,7 +1,13 @@
+import Forms from "./components/1-forms/Forms";
+import KeyboardClipboard from "./components/2-keyboardClipboard/KeyboardClipboard";
+import MouseEvent from "./components/3-mouseEvents/MouseEvent";
+
 function App() {
-  return (
+  return ( 
     <div>
-      
+      <Forms />
+      <KeyboardClipboard />
+      <MouseEvent />
     </div>
   );
 }

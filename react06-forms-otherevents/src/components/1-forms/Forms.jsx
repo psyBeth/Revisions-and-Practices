@@ -1,16 +1,26 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container'
+import { useState } from 'react';
 
 
 const Forms = () => {
+  const [username, setUsername] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  const handleUsername = (e) => {
+    console.log(e.target.value);
+  }
+
+
   return (
-    <container className="mt-4">
+    <Container className="mt-4">
     <Form>
       <h1 className='text-danger'>FORMS</h1>
       <Form.Group className="mb-3" controlId="username">
-        <Form.Label>Username</Form.Label>
-        <Form.Control type="email" placeholder="Username" />
+        <Form.Label>Hello</Form.Label>
+        <Form.Control type="text" placeholder="Username" onChange={handleUsername}/>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="email">
@@ -27,7 +37,7 @@ const Forms = () => {
         Submit
       </Button>
     </Form>
-    </container>
+    </Container>
   )
 }
 

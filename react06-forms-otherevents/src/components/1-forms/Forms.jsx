@@ -10,7 +10,7 @@ const Forms = () => {
   const [password, setPassword] = useState("")
 
   const handleUsername = (e) => {
-    console.log(e.target.value);
+    setUsername(e.target.value);
   }
 
 
@@ -19,7 +19,9 @@ const Forms = () => {
     <Form>
       <h1 className='text-danger'>FORMS</h1>
       <Form.Group className="mb-3" controlId="username">
-        <Form.Label>Hello</Form.Label>
+        <Form.Label>
+          {username && <span className='fw-bold'>Hello {username}</span>}
+        </Form.Label>
         <Form.Control type="text" placeholder="Username" onChange={handleUsername}/>
       </Form.Group>
 

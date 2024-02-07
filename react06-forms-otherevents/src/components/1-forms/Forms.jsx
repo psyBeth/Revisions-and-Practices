@@ -13,10 +13,18 @@ const Forms = () => {
     setUsername(e.target.value);
   }
 
+  const handleFormSubmit = (e) => {
+    console.log(e.target.value);
+    e.preventDefault()
+    alert(`
+      
+    `)
+  }
+
 
   return (
     <Container className="mt-4">
-    <Form>
+    <Form onSubmit={handleFormSubmit}>
       <h1 className='text-danger'>FORMS</h1>
       <Form.Group className="mb-3">
         <Form.Label>

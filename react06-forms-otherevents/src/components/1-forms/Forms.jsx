@@ -22,7 +22,7 @@ const Forms = () => {
         <Form.Label>
           {username && <span className='fw-bold'>Hello {username}</span>}
         </Form.Label>
-        <Form.Control type="text" placeholder="Username" onChange={handleUsername}/>
+        <Form.Control type="text" placeholder="Username" onChange={handleUsername} value={username}/>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="email">

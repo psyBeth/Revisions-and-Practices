@@ -27,22 +27,41 @@ const Forms = () => {
     <Form onSubmit={handleFormSubmit}>
       <h1 className='text-danger'>FORMS</h1>
       <Form.Group className="mb-3">
+        //! The OnChange event is triggered whenever the input value changes. We can update the State via the event handler we wrote.
         <Form.Label>
           {username && <span className='fw-bold'>Hello {username}</span>}
         </Form.Label>
-        <Form.Control type="text" placeholder="Username" onChange={handleUsername} value={username} id="username" required/>
+        <Form.Control 
+        type="text" 
+        placeholder="Username" 
+        onChange={handleUsername} 
+        value={username} 
+        id="username" 
+        required/>
       </Form.Group>
 
       <Form.Group className="mb-3">
         <Form.Label>
           Email: <span className='fw-bold'>{email}</span>
         </Form.Label>
-        <Form.Control type="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} value={email} id="email" required/>
+        <Form.Control 
+        type="email" 
+        placeholder="Enter email" 
+        onChange={(e) => setEmail(e.target.value)} 
+        value={email} 
+        id="email" 
+        required/>
       </Form.Group>
 
       <Form.Group className="mb-3">
         <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} id='password' required/>
+        <Form.Control 
+        type="password" 
+        placeholder="Password" 
+        onChange={(e) => setPassword(e.target.value)} 
+        value={password} 
+        id='password' 
+        required/>
       </Form.Group>
       
       <Button variant="danger" type="submit">

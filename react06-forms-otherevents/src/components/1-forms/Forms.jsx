@@ -17,8 +17,17 @@ const Forms = () => {
     console.log(e.target.value);
     e.preventDefault()
     alert(`
-      
+      username: ${username},
+      email: ${email},
+      password: ${password}
     `)
+
+    //* It has been added to show how data can be posted as a result of a submit operation in the future.
+    // const res = axios.post("url", {username, password, email})
+    //? no need to put method="POST" on Form tag
+    //* or alternate method
+    // fetch("url", {method:"POST", data:{username, password, email}})
+    // .then()
   }
 
 

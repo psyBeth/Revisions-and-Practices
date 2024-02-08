@@ -12,6 +12,24 @@ const KeyboardClipboard = () => {
     }
   }
 
+  const handleCopy = (e) => {
+    alert("Copying the material is forbidden.")
+    e.preventDefault()
+  }
+  const handleCut = (e) => {
+    alert("Cutting the keyboard is forbidden.")
+    e.preventDefault()
+  } 
+
+  const handlePaste = (e) => {
+    e.target.style.fontFamily = "Courier New"
+    e.target.style.fontSize = "1.2rem"
+    e.target.style.border = "1px solid red"
+    alert("Pasting content is forbidden.")
+    e.preventDefault()
+  }
+   
+
   return (
     <div className="container mt-4">
 
@@ -27,7 +45,18 @@ const KeyboardClipboard = () => {
 
       <div className="mt-3">
         {/* always lowercase */}
-        <p>{content.toLocaleLowerCase()}</p>
+        <p onCopy={handleCopy} onCut={handleCut}>{content.toLocaleLowerCase()}</p>
+      </div>
+
+      <div>
+        <textarea 
+        name="form-control" 
+        id="area" 
+        cols="30" 
+        rows="10"
+        onCut={handleCut}
+        onPaste={handlePaste}
+        ></textarea>
       </div>
 
     </div>

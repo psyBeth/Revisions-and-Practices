@@ -14,7 +14,7 @@ const Forms = () => {
   }
 
   const handleFormSubmit = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target);
     e.preventDefault()
     alert(`
       username: ${username},

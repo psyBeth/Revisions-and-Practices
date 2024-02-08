@@ -22,6 +22,11 @@ const Forms = () => {
       password: ${password}
     `)
 
+    //* to reset the state value after submitting
+    setEmail("")
+    setPassword("")
+    setUsername("") 
+
     //* It has been added to show how data can be posted as a result of a submit operation in the future.
     // const res = axios.post("url", {username, password, email})
     //? no need to put method="POST" on Form tag
@@ -36,7 +41,7 @@ const Forms = () => {
     <Form onSubmit={handleFormSubmit}>
       <h1 className='text-danger'>FORMS</h1>
       <Form.Group className="mb-3">
-        //! The OnChange event is triggered whenever the input value changes. We can update the State via the event handler we wrote.
+        {/* The OnChange event is triggered whenever the input value changes. We can update the State via the event handler we wrote.*/}
         <Form.Label>
           {username && <span className='fw-bold'>Hello {username}</span>}
         </Form.Label>

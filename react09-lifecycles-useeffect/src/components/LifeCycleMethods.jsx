@@ -1,3 +1,21 @@
+//?=============================================================
+//?                 LIFECYCLE METHODS
+//?      https://reactjs.org/docs/react-component.html
+//?=============================================================
+
+//* Lifecycle methods apply to components while they exist in the DOM.
+//* These are special React methods that allow us to perform operations on them.
+//* For example, when a component is created and the DOM is pressed,
+//* to do something when updated or removed from the DOM
+//* lifecycle methods can be used.
+//* The most well-known lifecycle method is the render() method.
+
+//! Creating a component (constructor) REQUIRED
+//! Immediately after a component is added to the DOM tree (componentDidMount)
+//! Rendering a component to the DOM -- render()
+//! (Optional) Immediately after a component is updated (componentDidUpdate)
+//! After removing a component from the DOM tree (componentWillUnmount)
+
 import React from "react"
 
 class LifeCycleMethods extends React.Component {

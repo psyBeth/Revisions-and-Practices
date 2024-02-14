@@ -19,7 +19,7 @@
 import React from "react"
 
 class LifeCycleMethods extends React.Component {
-  //! 1-) Bir componentin olusturulmasinda cagrilir
+  //! 1-) Called when creating a component
   constructor(props) {
     console.log("Constructor running")
     super(props)
@@ -28,9 +28,9 @@ class LifeCycleMethods extends React.Component {
     }
 }
 
-  //! 3-) Bir component DOM agacina eklendiginde calistirilir.
-  //! (İlk render sonrasi).
-  //! Her yasam dongusu icin bir kere calisir.
+  //! 3-) It is executed when a component is added to the DOM tree.
+  //! (After first render).
+  //! It runs once per life cycle.
   componentDidMount() {
     //? Subscription (Fetch, timer kurulumu, initiliaztion islemleri (local storage))
     console.log("componentDidMount")

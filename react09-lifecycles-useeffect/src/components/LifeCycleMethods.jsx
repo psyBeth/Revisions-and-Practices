@@ -32,18 +32,18 @@ class LifeCycleMethods extends React.Component {
   //! (After first render).
   //! It runs once per life cycle.
   componentDidMount() {
-    //? Subscription (Fetch, timer kurulumu, initiliaztion islemleri (local storage))
+    //? Subscription (Fetch, timer, initiliaztion (local storage))
     console.log("componentDidMount")
   }
 
-  //! 4-) Bu metot ilk render haric diger tüm render'lardan sonra cagrilir.
+  //! 4-) This method is called after all renders except the first render.
   componentDidUpdate() {
-    //? Bir componentin state'i veya propu değiştikten sonra bir işlemi tetiklemek istersek didUpdate metodu kullanilailir. Örneğin, API'den çekilen parite bilgisine göre alım veya satim isleminin kontorülünün yapılmasi gibi.
+    //? If we want to trigger an action after the state or prop of a component changes, the didUpdate method can be used. For example, controlling the purchase or sale transaction according to the parity information retrieved from the API.
     console.log("componentDidUpdate")
   }
 
   componentWillUnmount() {
-    //? Tüm üyeliklerin (Fetch, timer, silme) iptalinin yapilabileceği method
+    //? Method to cancel all memberships (Fetch, timer, delete)
     console.log("componentWillUnmount")
   }
 
@@ -58,7 +58,7 @@ class LifeCycleMethods extends React.Component {
       count: this.state.count + 1,
     })
   }
-  //! 2-) Her bir state yada prop degistiginde (render) yeniden cagrilir
+  //! It is called again every time a state or prop changes (render).
   render() {
     console.log("****************")
     console.log("Render running")

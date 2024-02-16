@@ -13,11 +13,11 @@ function App() {
       </button>
     
 
-    {goster && <LifeCycleMethods />}
+    {/* {goster && <LifeCycleMethods />} */}
 
     {goster && <UseEffectHook />}
 
-    {goster && <User />}
+    {/* {goster && <User />} */}
     </div>
   );
 }

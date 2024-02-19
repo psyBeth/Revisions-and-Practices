@@ -1,5 +1,5 @@
-import LifeCycleMethods from "./components/LifeCycleMethods";
-import UseEffectHook from "./components/UseEffectHook";
+// import LifeCycleMethods from "./components/LifeCycleMethods";
+// import UseEffectHook from "./components/UseEffectHook";
 import User from "./components/User";
 import { useState } from "react";
 

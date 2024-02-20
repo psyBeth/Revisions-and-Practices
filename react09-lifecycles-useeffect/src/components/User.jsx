@@ -25,7 +25,7 @@ const User = () => {
 
     //? componentWillUnmount (cleanup function)
     return () => {
-      console.log("Timer iptal edildi")
+      console.log("Timer cancelled.")
       clearInterval(sure)
     }
   }, [])

@@ -30,7 +30,7 @@ const User = () => {
     }
   }, [])
 
-  console.log(user)
+  // console.log(user)
 
   //? user object destr.
   const {

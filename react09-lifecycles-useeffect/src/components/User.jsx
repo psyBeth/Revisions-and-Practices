@@ -16,7 +16,7 @@ const User = () => {
     axios(url)
       .then((res) => setUser(res.data.results[0]))
       .catch((err) => console.log(err))
-  }
+  } //* axios itself is not a function, so we put it inside a function
 
   //? componentDidMount
   useEffect(() => {

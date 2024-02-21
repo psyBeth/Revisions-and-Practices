@@ -86,53 +86,80 @@
 
 //? OBJECT DESTRUCTURING
 
-const Car = {
+// const Car = {
 
-    brand: 'Ford',
-    model: 'Mustang',
-    year: 1967,
-    isAutoGear: true,
-    colors: ['white', 'red'],
-    details: {
-        color1: 'white',
-        color2: 'red',
-        engineSize: 4900
-    },
-    startEngine: function() {
-        return 'Engine Runned.'
-    }
-}
+//     brand: 'Ford',
+//     model: 'Mustang',
+//     year: 1967,
+//     isAutoGear: true,
+//     colors: ['white', 'red'],
+//     details: {
+//         color1: 'white',
+//         color2: 'red',
+//         engineSize: 4900
+//     },
+//     startEngine: function() {
+//         return 'Engine Runned.'
+//     }
+// }
 
 //? Rest Operator (Key isimleri önemli!)
 // const { year, model, brand, ...others } = Car
 // console.log(year, model, brand, others)
 
 // İsim değiştirme:
-const { year, model: newName, brand, ...others } = Car
-console.log(year, newName, brand, others)
+// const { year, model: newName, brand, ...others } = Car
+// console.log(year, newName, brand, others)
 
-//? Sread Operator:
-const newObj = {
-    ...Car,
-    newKey: 'new-value'
-}
-console.log(newObj)
+// //? Sread Operator:
+// const newObj = {
+//     ...Car,
+//     newKey: 'new-value'
+// }
+// console.log(newObj)
 
-//? Object to JSON:
-const json = JSON.stringify(Car)
-console.log(typeof json, json)
+// //? Object to JSON:
+// const json = JSON.stringify(Car)
+// console.log(typeof json, json)
 
-//? JSON to Object:
-const obj = JSON.parse(json)
-console.log(typeof obj, obj, obj.brand)
+// //? JSON to Object:
+// const obj = JSON.parse(json)
+// console.log(typeof obj, obj, obj.brand)
 
-//? Object to Array
-// Keys:
-const arrKey = Object.keys(Car)
-console.log(arrKey)
-// Values:
-const arrValue = Object.values(Car)
-console.log(arrValue)
-
+// //? Object to Array
+// // Keys:
+// const arrKey = Object.keys(Car)
+// console.log(arrKey)
+// // Values:
+// const arrValue = Object.values(Car)
+// console.log(arrValue)
 
 /* ------------------------------------------------------- */
+
+//? CONSTRUCTORS
+
+const constructorFunction = function() {
+    this.property = 'value';
+}
+
+//? "NEW" KEYWORD
+
+const carConstructor = function(brand, model, year) {
+    this.brand = brand,
+    this.model = model,
+    this.year = year,
+
+    this.startEngine = function() {
+        console.log('engine runs')
+    }
+};
+
+const newCar = new carConstructor('Ford',  'Mustang', 1967)
+console.log(typeof newCar, newCar);
+console.log(newCar.brand);
+console.log(newCar.startEngine());
+
+const newCar2 = new carConstructor('Mercedes',  'CLK200', 2015)
+console.log(typeof newCar2, newCar2);
+console.log(newCar2.brand);
+console.log(newCar2.startEngine());

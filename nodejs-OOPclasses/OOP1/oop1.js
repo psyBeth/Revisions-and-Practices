@@ -34,14 +34,27 @@ const Car = {
     startEngine: function(param1){
         console.log(param1)
         return 'Engine runned'
+    },
+    getDetails: function(){
+        // return this
+        // return this.brand + ' ' + this.model + ' ' + this.year
+        return this.startEngine('hello')
+    },
+    arrowMethod: () => {
+        //* arrow function is globalScope (not working this keyword in here)
+        return this // output is {}
     }
 }
-console.log(Car.brand);
-console.log(Car.colors[0]);
-console.log(Car.startEngine('value'));
+// console.log(Car.brand);
+// console.log(Car.colors[0]);
+// console.log(Car.startEngine('value'));
 
-// alternative style
-console.log(Car['brand']);
-console.log( Car['colors'][0] )
-console.log( Car['details']['engineSize'] )
-console.log( Car['startEngine'](0) )
+// // alternative style
+// console.log(Car['brand']);
+// console.log( Car['colors'][0] )
+// console.log( Car['details']['engineSize'] )
+// console.log( Car['startEngine'](0) )
+
+/* ----------------------------------- */
+// console.log(Car.getDetails());
+console.log(Car.arrowMethod());

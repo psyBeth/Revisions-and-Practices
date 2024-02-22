@@ -63,6 +63,8 @@
 // const Renault = new Car('Renault', 'Megane', 2010)
 // console.log(Renault);
 
+/* ------------------------------------------------------- */
+
 //? INHERITANCE (parent-child relationship)
 //? this= child class, super= parent class
 
@@ -103,3 +105,6 @@ class Accessory extends Car {
 }
 const FordClimate = new Accessory('Bosh Climate', 'Ford', 'Mustang', 1967, 'Car')
 console.log(FordClimate);
+
+/* ------------------------------------------------------- */
+

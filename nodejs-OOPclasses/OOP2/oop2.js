@@ -64,6 +64,7 @@
 // console.log(Renault);
 
 //? INHERITANCE (parent-child relationship)
+//? this= child class, super= parent class
 
 class Vehicle {
     vehicleIsActive = false
@@ -78,6 +79,7 @@ class Car extends Vehicle {
     isRunning = false
 
     constructor(brand, model,year,vehicleType) {
+        //? super() must be at the top (parent constructor should be run first)
         super(vehicleType)
         this.brand = brand,
         this.model = model,
@@ -91,4 +93,13 @@ class Car extends Vehicle {
     }
 };
 
-const Ford = new Car('Ford', 'Mustang', 1967)
+class Accessory extends Car {
+
+    constructor (accessoryName, brand, model, year) {
+        super(brand, model, year)
+        this.accessoryName =accessoryName
+    }
+
+}
+const FordClimate = new Accessory('Bosh Climate', 'Ford', 'Mustang', 1967, 'Car')
+console.log(FordClimate);

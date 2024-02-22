@@ -34,3 +34,31 @@
 // console.log(typeof PascalCaseClassName);
 
 /* ------------------------------------------------------- */
+
+class Car {
+
+    isRunning = false
+
+    constructor(brand, model,year) {
+        this.brand = brand,
+        this.model = model,
+        this.year = year
+    }
+
+    runEngine() {
+        this.isRunning = true
+        console.log('engine is running...');
+        return this.isRunning;
+    }
+};
+const Ford = new Car ('Ford', 'Mustang', 1967)
+console.log(Ford);
+
+// Ford.isRunning = true // changed it (can also do with a method like runEngine)
+Ford.runEngine();
+console.log(Ford);
+
+const Mercedes = new Car('Mercedes', 'CLK200', 2010);
+console.log(Mercedes);
+const Renault = new Car('Renault', 'Megane', 2010)
+console.log(Renault);

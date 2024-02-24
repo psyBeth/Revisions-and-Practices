@@ -55,3 +55,5 @@ module.exports.testFunctionB = function(){
 module.exports.testFunctionC = function(){
     console.log("this is a function C");
 }
+module.exports.pi = 3.14
+

@@ -24,8 +24,9 @@ const testSingleFunction = require('./modules/module')
 // test3()
 
 //* object
-const {testFunctionA: test1, testFunctionB: test2, testFunctionC: test3} = require('./modules/module')
+const {testFunctionA: test1, testFunctionB: test2, testFunctionC: test3, pi} = require('./modules/module')
 // testFunctionA()
 // testFunctionB()
 // testFunctionC()
 test1(), test2(), test3();
+console.log(pi);

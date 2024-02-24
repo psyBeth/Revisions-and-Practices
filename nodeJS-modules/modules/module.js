@@ -13,15 +13,15 @@ module.exports = function(){
 
 //? multi function
 
-const testFunctionA = function(){
-    console.log("this is a function A");
-}
-const testFunctionB = function(){
-    console.log("this is a function B");
-}
-const testFunctionC = function(){
-    console.log("this is a function C");
-}
+// const testFunctionA = function(){
+//     console.log("this is a function A");
+// }
+// const testFunctionB = function(){
+//     console.log("this is a function B");
+// }
+// const testFunctionC = function(){
+//     console.log("this is a function C");
+// }
 
 //thinking of something iterable
 //* array
@@ -32,9 +32,26 @@ const testFunctionC = function(){
 // ]
 
 //* object
-module.exports = {
-    testFunctionA: testFunctionA,
-    testFunctionB: testFunctionB,
-    testFunctionC: testFunctionC
-}
+// module.exports = {
+//     testFunctionA: testFunctionA,
+//     testFunctionB: testFunctionB,
+//     testFunctionC: testFunctionC,
+//     pi: 3.14
+// }
 
+// module.exports = {
+//     testFunctionA,
+//     testFunctionB,
+//     testFunctionC,
+//     pi: 3.14
+// }
+
+module.exports.testFunctionA = function(){
+    console.log("this is a function A");
+}
+module.exports.testFunctionB = function(){
+    console.log("this is a function B");
+}
+module.exports.testFunctionC = function(){
+    console.log("this is a function C");
+}

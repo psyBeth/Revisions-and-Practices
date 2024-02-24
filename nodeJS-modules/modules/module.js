@@ -10,3 +10,21 @@ console.log("this line from module");
 module.exports = function(){
     console.log("this is a function");
 }  // this only works with one single function
+
+//? multi function
+
+const testFunctionA = function(){
+    console.log("this is a function A");
+}
+const testFunctionB = function(){
+    console.log("this is a function B");
+}
+const testFunctionC = function(){
+    console.log("this is a function C");
+}
+//thinking of something iterable
+module.exports = [
+    testFunctionA,
+    testFunctionB,
+    testFunctionC
+]

@@ -13,9 +13,19 @@ require('./modules')
 const testSingleFunction = require('./modules/module')
 // testSingleFunction()
 
+
 //? multi function call
-const [test1, test2, test3] = require('./modules/module')
-// test1(), test2(), test3()
-test1()
-test2()
-test3()
+
+//* array
+// const [test1, test2, test3] = require('./modules/module')
+// // test1(), test2(), test3()
+// test1()
+// test2()
+// test3()
+
+//* object
+const {testFunctionA: test1, testFunctionB: test2, testFunctionC: test3} = require('./modules/module')
+// testFunctionA()
+// testFunctionB()
+// testFunctionC()
+test1(), test2(), test3();

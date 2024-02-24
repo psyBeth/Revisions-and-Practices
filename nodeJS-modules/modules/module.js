@@ -22,9 +22,19 @@ const testFunctionB = function(){
 const testFunctionC = function(){
     console.log("this is a function C");
 }
+
 //thinking of something iterable
-module.exports = [
-    testFunctionA,
-    testFunctionB,
-    testFunctionC
-]
+//* array
+// module.exports = [
+//     testFunctionA,
+//     testFunctionB,
+//     testFunctionC
+// ]
+
+//* object
+module.exports = {
+    testFunctionA: testFunctionA,
+    testFunctionB: testFunctionB,
+    testFunctionC: testFunctionC
+}
+

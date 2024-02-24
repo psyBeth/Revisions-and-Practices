@@ -36,3 +36,4 @@ console.log(pi);
 require('dotenv').config() //.env file content to process.env
 console.log(process.env.PORT);
 console.log(process.env.HOST);
+console.log(process.env.SAMPLE_TEXT);

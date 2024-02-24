@@ -30,3 +30,9 @@ const {testFunctionA: test1, testFunctionB: test2, testFunctionC: test3, pi} = r
 // testFunctionC()
 test1(), test2(), test3();
 console.log(pi);
+
+// require('http') //project folder firstly, ant then global
+// require('node:http')
+require('dotenv').config() //.env file content to process.env
+console.log(process.env.PORT);
+console.log(process.env.HOST);

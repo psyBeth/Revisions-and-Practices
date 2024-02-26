@@ -22,7 +22,20 @@ const http = require('node:http')
 // }).listen(8000, () => console.log(`server successfully runs : http://${HOST}:${PORT}`)); // http://localhost:8000
 
 const app = http.createServer((req, res) => {
-    console.log(req.method);
-    res.end("<h1>wellcome to my first node.js server</h1>")
+    // console.log(req);
+    // console.log("******************");
+    // console.log(req.method);
+    // console.log("******************");
+    // console.log(req.url);
+    //? end points home: /,  list:,  test:  /test
+    if(req.url == '/') {
+    res.end("<h1>wellcome to homepage</h1>")
+    }
+    else if(req.url == '/list') {
+        res.end('<h2>wellcome to list page</h2>')
+    }
+    else if (req.url == '/test'){
+        res.end('<h1>wellcome to test page</h1>')
+    }
 });
 app.listen(8000, () => console.log(`server successfully runs : http://${HOST}:${PORT}`));

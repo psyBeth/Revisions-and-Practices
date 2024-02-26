@@ -2,7 +2,22 @@
 /*
     NODE JS SERVER 
 */
-console.log("wellcome!");
+// console.log("wellcome!");
+
+require('dotenv').config();
+
+// const PORT = process.env.PORT || 8000
+// const HOST = process.env.HOST || "127.0.0.1"
+
+const PORT = process.env?.PORT || 8000
+const HOST = process.env?.HOST || "127.0.0.1"
+
 const http = require('node:http')
 
-http.createServer()
+// http.createServer((param1, param2) => {...})
+// http.createServer((request, response) => {...})
+http.createServer((req, res) => {
+
+    res.end("<h1>wellcome to my first node.js server</h1>")
+
+}).listen(8000, () => console.log(`server successfully runs : http://${HOST}:${PORT}`)); // http://localhost:8000

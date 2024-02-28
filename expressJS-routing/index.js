@@ -14,22 +14,11 @@ const HOST=process.env?.HOST || "127.0.0.1"
 const express = require('express');
 const app = express();  // created a server on express
 
-app.get('/', (req, res) => {
-    // res.write("hello")
-    // res.end()
+// app.post('/', (req, res) => { res.send({"message" : "POST method request"})})
+// app.put('/', (req, res) => { res.send({"message" : "PUT method request"})})
+// app.delete('/', (req, res) => { res.send({"message" : "DELETE method request"})})
 
-    // res.write(JSON.stringify({
-    //     message : "hello"
-    // }))
-    // res.end()
+app.all('/', app.post('/', (req, res) => { res.send({"message" : "ALL method called"})}))
 
-    // console.log("hello world!");
-    // res.send()
-
-    res.send({
-        "message" : "hello"
-    })
-//     res.send('hello') // no send more than once
- })
 
 app.listen(PORT, HOST, () => console.log(`server succeed on http://${HOST}:${PORT}`))

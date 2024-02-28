@@ -31,7 +31,40 @@ const app = express();  // created a server on express
 // regex
 //! iki / arasında regex kabul edilir  ' kullanmayın
 // regexr.com
-app.get(/abc$/ ,(req,res)=>{ res.send({ "message":"GET method called" })}) // sonu ne olursa olsun
+// app.get(/abc$/ ,(req,res)=>{ res.send({ message:"end with any" })}) // sonu ne olursa olsun
+// app.get(/^\/abc/ ,(req,res)=>{ res.send({ message:"start with any" })}) // başlangıç ne olursa olsun
+// app.get(/\/*abc/ ,(req,res)=>{ res.send({ message:"start with any" })}) // başlangıç ne olursa olsun
+// app.get(/abc/ ,(req,res)=>{ res.send({ message:"find abc  in path" })}) // başlangıç ne olursa olsun
+
+
+//? url parameters
+
+app.get('/:blogId/location/:location',(req,res)=>{ 
+
+    // res.send({
+    //      params:req.params, 
+    //     blogId: req.params.blogId
+    // })
+    res.send({
+        
+        blogId: req.params.blogId,
+        url:{
+            protocol:req.protocol,
+            domain:req.hostname,
+            method:req.method,
+            url:req.url,
+            path:req.path,
+            
+            params:req.params,
+            body: req.body
+            
+            // header:req.header,
+
+             
+        }
+    })
+
+}) // başlangıç ne olursa olsun
 
 
 

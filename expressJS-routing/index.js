@@ -38,34 +38,90 @@ const app = express();  // created a server on express
 
 
 //? url parameters
+// http://127.0.0.1:8000/:222/location/:izmir
+// app.get('/:blogId/location/:location',(req,res)=>{ 
 
-app.get('/:blogId/location/:location',(req,res)=>{ 
+//     // res.send({
+//     //      params:req.params, 
+//     //     blogId: req.params.blogId
+//     // })
+//     res.send({
+        
+//         blogId: req.params.blogId,
+//         url:{
+//             protocol:req.protocol,
+//             domain:req.hostname,
+//             method:req.method,
+//             url:req.url,
+//             path:req.path,            
+//             params:req.params,
+//             body: req.body,
+//             query: req.query,            
+//             header:req.headers,             
+//         }
+//     })
 
-    // res.send({
-    //      params:req.params, 
-    //     blogId: req.params.blogId
-    // })
+// }) // başlangıç ne olursa olsun
+
+// app.get('/:userId',(req,res)=>{ 
+
+// app.get('/:userId[0-9]',(req,res)=>{ 
+// app.get('/:userId[\\d]+',(req,res)=>{ 
+// app.get('/:userId[\\D]+',(req,res)=>{ 
+// http://127.0.0.1:8000/:1-:deneme
+/*
+app.get('/:userId-:username',(req,res)=>{ 
+
     res.send({
         
-        blogId: req.params.blogId,
+        userId: req.params.userId,
+        username: req.params.username,
+        // body: req.body,
+
         url:{
             protocol:req.protocol,
             domain:req.hostname,
             method:req.method,
             url:req.url,
-            path:req.path,
-            
+            path:req.path,            
             params:req.params,
-            body: req.body
-            
-            // header:req.header,
-
-             
+          
+            query: req.query,            
+            header:req.headers,             
         }
     })
 
 }) // başlangıç ne olursa olsun
+*/
+// app.get('/',(req,res)=>{ 
+
+//     res.status(200).send({
+//         message:"tebrikler üye oldunuz"
+
+//     })
+// })
+// app.post('/',(req,res)=>{ res.status(201).send({ "message":"POST method called" })})
+// app.put('/',(req,res)=>{ res.status(202).send({ "message":"PUT method called" })})
+// app.delete('/',(req,res)=>{ res.status(202).send({ "message":"DELETE method called" })})
+
+//? redirect (sadece 300 lü kodlar)
+
+// app.get('/',(req,res)=>{  
+//     res.redirect(301,'https://www.google.com')
+//     // res.redirect(302,'/about')
+// })
+//? show file content
+app.get('/file',(req,res)=>{
+    // __dirname bulunduğun klasör 
+    res.sendFile(__dirname+'/readme.md' )
+    // res.redirect(302,'/about')
+})
+
+app.get('/download',(req,res)=>{
+    // res.download('./test/abouttest.md','express routing')
+    res.download('./readme.md','express routing')
 
 
-
+})
 app.listen(PORT,HOST,()=>console.log(`Server runned http://${HOST}:${PORT}`))
+

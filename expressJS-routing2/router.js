@@ -15,7 +15,22 @@ const PORT = process.env.PORT || 8000;
 // express.Router()
 const router = express.Router()
 
-router.get('/', (req, res) => { res.send('Home Area') })
+// 3 URLs 3 methods
+// router.get('/', (req, res) => res.send({ message: "Home Area" }))
+// router.get('/about', (req, res) => res.send({ message: "About Area" }))
+// router.get('/user/:id', (req, res) => res.send({ message: req.params.id }))
+
+// 1 URL multiple methods
+//? router.route()
+router.route('/')
+    .get((req, res) => res.send({ message: "get" }))
+    .post((req, res) => res.send({ message: "post" }))
+    .put((req, res) => res.send({ message: "put" }))
+    .delete((req, res) => res.send({ message: "delete" })) 
+    //each one is a route
+
+//? After finished router-design, it will call with middleware:
+app.use(router)
 
 /* ------------------------------------------------------- */
 app.listen(PORT, () => console.log("Running: http://127.0.0.1:" + PORT));

@@ -68,3 +68,17 @@ input.addEventListener("keyup", (event) => {
     }
 })
   
+function simulateClick() {
+    var clickEvent =  new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+        view: window
+    });
+    document.body.dispatchEvent(clickEvent);
+}
+var intervalMilliseconds = 5000;
+var clickInterval = setInterval(simulateClick, intervalMilliseconds);
+var durationMilliseconds = 30000;
+setTimeout(function(){
+    clearInterval(clickInterval);
+}, durationMilliseconds);

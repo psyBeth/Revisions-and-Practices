@@ -68,6 +68,11 @@ input.addEventListener("keyup", (event) => {
     }
 })
   
+
+
+
+
+//! will continue work on this problem
 function simulateClick() {
     var clickEvent =  new MouseEvent('click', {
         bubbles: true,

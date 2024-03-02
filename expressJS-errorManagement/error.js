@@ -30,7 +30,8 @@ const PORT = process.env.PORT || 8000;
 //         }
 
 //     } catch(err) {
-
+    //! if we send an error object inside next, errorHandler will catch it.
+     //  next(err)
 //         res.send({
 //             error: true,
 //             message: err.message,
@@ -40,19 +41,17 @@ const PORT = process.env.PORT || 8000;
 
 // });
 /* ------------------------------------------------------- */
-//* ERROR HANDLER  (func in Express)
 
 app.get('/*', (req, res) => {
     res.errorStatusCode = 404;
 
-    throw new Error('error message')
+    throw new Error('this is an error message', { cause: 'no reason lol'})
 });
 
-
-
 /* ------------------------------------------------------- */
 
 /* ------------------------------------------------------- */
+//* ERROR HANDLER  (func in Express)
 //? errorHandler is middleware and has must be four parameters. (error, request, response, next)
 const errorHandler = (err, req, res, next) => {
     console.log('errorHandler is running');
@@ -62,6 +61,8 @@ const errorHandler = (err, req, res, next) => {
     res.status(errorStatusCode).send({
           error: true,
           message: err.message,
+          cause: err.cause,
+          stack: err.stack,
      })
 };
 //? for run errorHandler call in use.
